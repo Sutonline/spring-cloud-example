@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Sutonline/springCloudConfig
+          search-paths: config
+          username: sutonlineskyon@gmail.com
+          password: woxiangni123
+      label: master
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8889/eureka/
+
+
+#########################################################################
+# spring:
+#   cloud:
+#     config:
+#       server:
+#         git:
+#           uri: 配置git仓库地址
+#           search-paths: 配置仓库路径
+#           username: 仓库的用户名
+#           password: 密码
+#
+#
+#
+#
+##########################################################################
